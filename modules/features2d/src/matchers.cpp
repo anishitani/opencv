@@ -613,7 +613,7 @@ void DescriptorMatcher::checkMasks( InputArrayOfArrays _masks, int queryDescript
             {
                 int rows = trainDescCollection[i].empty() ? utrainDescCollection[i].rows : trainDescCollection[i].rows;
                     CV_Assert( masks[i].rows == queryDescriptorsCount &&
-                        (masks[i].cols == rows || masks[i].cols == rows) &&
+                        (masks[i].rows == rows || masks[i].cols == rows) &&
                         masks[i].type() == CV_8UC1 );
             }
         }
